@@ -6,11 +6,7 @@ on:
 
 jobs:
   validate:
-    runs-on:
-    - self-hosted
-    - tower
-    - ubuntu-latest
-    - tower-run-${{ github.run_id }}-${{ github.run_attempt }}
+    runs-on: ["self-hosted", "ubuntu-latest"]
     steps:
     - uses: actions/checkout@v4
     - name: HACS validation

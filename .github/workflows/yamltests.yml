@@ -11,11 +11,7 @@ on:
 
 jobs:
   tests:
-    runs-on:
-    - self-hosted
-    - tower
-    - ubuntu-latest
-    - tower-run-${{ github.run_id }}-${{ github.run_attempt }}
+    runs-on: ["self-hosted", "ubuntu-latest"]
     strategy:
       matrix:
         python-version: ['3.13']
